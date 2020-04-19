@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+  <package name="basicstruts" extends="struts-default">
+ 
+  <action name="index">
+    <result>index.jsp</result>
+  </action>  
+  
+  <action name="stack" class="com.valuestack.action.StackAction"> </action>
+  
+  <action name="valuestack" class="com.valuestack.action.ValueStackAction">
+  	<result name="success">/valueStack.jsp</result>
+  </action> 
+ 
+ <action name="objectstack" class="com.valuestack.action.ObjectStackAction">
+  	<result name="success">/valueStack.jsp</result>
+  </action> 
+  
+  
+   <action name="liststack" class="com.valuestack.action.ListAction">
+  	<result name="success">/valueStack.jsp</result>
+  	</action>
+  	
+  	
+  	 <action name="contextstack" class="com.valuestack.action.ContextAction">
+  		<result name="success">/ognl.jsp</result>
+ 	 </action> 
+</package>
+ 
+ 
+ 
+ 
+</struts>
